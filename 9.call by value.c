@@ -1,13 +1,31 @@
-#include<stdio.h>  
-void change(int num) {    
-    printf("Before adding value inside function num=%d \n",num);    
-    num=num+100;    
-    printf("After adding value inside function num=%d \n", num);    
-}    
-int main() {    
-    int x=100;    
-    printf("Before function call x=%d \n", x);    
-    change(x);//passing value in function    
-    printf("After function call x=%d \n", x);    
-return 0;  
+ //Call by Value Example - Swapping 2 numbers using Call by Value
+#include <stdio.h>
+ 
+ 
+void swap(int, int);
+ 
+int main()
+{
+   int x, y;
+ 
+   printf("Enter the value of x and y\n");
+   scanf("%d%d",&x,&y);
+ 
+   printf("Before Swapping\nx = %d\ny = %d\n", x, y);
+ 
+   swap(x, y); 
+ 
+   printf("After Swapping\nx = %d\ny = %d\n", x, y);
+ 
+   return 0;
+}
+ 
+void swap(int a, int b)
+{
+   int temp;
+ 
+   temp = b;
+   b = a;
+   a = temp;
+    printf("Values of a and b is %d  %d\n",a,b);
 }
